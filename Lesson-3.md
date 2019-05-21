@@ -1,6 +1,6 @@
 # Lesson 3: Using the Rubrik SDK for Python
 
-This lesson will walk you through 
+This lesson will walk you through a few common workflows for managing Rubrik CDM using Python. 
 
 ## Take an On-Demand Snapshot
 
@@ -8,7 +8,7 @@ Next, take an on-demand snapshot of the Windows VM.
 First we are going to define the VM name and object type. This example uses a vSphere VM:
 
 ```
-vm_name = "windows2016"
+vm_name = "windows-2016"
 object_type = "vmware"
 ```
 
@@ -45,7 +45,7 @@ Log into the Rubrik Cluster UI and verify that an on-demand snapshot has begun. 
 To Live Mount a virtual machine, begin by defining the VM name:
 
 ```
-vm_name1 = "centos7-vm1"
+vm_name1 = "ubuntu-lamp"
 ```
 
 and then call the Live Mount function:
@@ -73,5 +73,30 @@ The output should look similar to the following:
 ```
 
 You can see for each one of these VMs, there are two GET calls to gather the information needed to then conduct one POST call to send the Live Mount request.
+
+Switch to the Windows Jumpbox both on vCenter and Rubrik CDM and verify Live Mount. Lab topology information can be found [here](/lab-topology.md).
+
+## SLA Domain Assignments
+
+As last exercise, we are going to get the list of all object in our Gold SLA:
+
+```
+vms_in_sla = rubrik.get_sla_objects(“Gold”,”vmware”)
+```
+
+
+The reponse should resemble: 
+
+```
+[DEBUG] -- <Response [200]>
+```
+
+To view the list of VMs, type: 
+
+```
+print(vms_in_sla)
+```
+
+## Documentation
 
 For more information, please see the Rubrik SDK for Python [Documentation](https://rubrik.gitbook.io/rubrik-sdk-for-python/) and the [GitHub Repository](https://github.com/rubrikinc/rubrik-sdk-for-python).
