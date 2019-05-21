@@ -2,63 +2,49 @@
 
 To prepare for this module's lab, you will need to install Python, `pip`, and set up a virtual environment.
 
+In the lab environment, switch to your CentOS VM. To do so, click **Consoles** on the left hand of the VLP screen, scroll down, and click `CENTOS`. 
+
+![](https://user-images.githubusercontent.com/47801550/58071945-733df400-7b9e-11e9-8188-7fd6e99ce9ec.png)
+
+Select **Not Listed?** and type `root` as the username. 
+
+![](https://user-images.githubusercontent.com/47801550/58072043-c021ca80-7b9e-11e9-857b-72e378f33e24.png)
+
+Use the password listed in the [lab topology](/lab-topology.md). 
+
 ## Installing Python
 
-Right-click Visual Studio Code and `Run as Administrator`. In the menu, go to **Terminal** > **New Terminal**. 
+(Optional) As a matter of good practice, first update packages:
 
 ```
-choco install python3
+yum -y update
 ```
 
-When prompted, specify `[Y]es` to run the script to install Python.
-
-Once the install is successful, type:
+(Optional) Next step would be install `yum-Utils`:
 
 ```
-py -3
+yum -y install yum-utils
 ```
 
-Once you see the `>>>` means you are running an interactive Python interpreter. If you need to exit for any reason, use `CTRL + D` or `exit()`.
+| Note: `yum-utils` is a collection of utilities and plugins extending and supplementing yum in various ways. |
+| --- |
 
-To type your first line of code, specify:
-
-```
-print("Python is fun!")
-```
-
-Hit **Enter**, you should see:
+Python 2.7 should have been installed on the CentOS VM. To verify:
 
 ```
-Python is fun!
+python --version
 ```
 
-Or do simple calculation:
+Next, let's verify that `pip` is installed and using version 19.1.1:
 
 ```
-4+7
+pip --version
 ```
 
-In this case, disable security warning for self-signed certificates:
-
-```
-import urllib3
-urllib3.disable_warnings()
-```
-
-Once done, you can use `exit()` to leave the Python Shell.
+| Note: `pip` is a package management system used to install and manage software packages written in Python. |
+| --- |
 
 ## Installing the Rubrik SDK for Python
-
-There are two way we can install Rubrik SDK for Python:
-
-* Using `pip`
-* Downloading package and manually installing
-
-The easiest way is to use `pip`. First, install `pip`:
-
-```
-choco install pip
-```
 
 When prompted, specify `[Y]es` to run the script to install `pip`.
 
@@ -73,27 +59,3 @@ git clone https://github.com/rubrikinc/rubrik-sdk-for-python
 cd rubrik-sdk-for-python
 python setup.py install
 ```
-
-## Setting Up a Virtual Environment
-
-A virtual environment is a tool that helps to keep dependencies required by different projects separate by creating isolated Python virtual environments.
-
-In your Command Prompt navigate to your project:
-
-```
-cd $your_project
-```
-
-Run this command within your project:
-
-```
-virtualenv env
-```
-
-Activate your virtualenv, a batch file is created in Windows:
-
-```
-\env\Scripts\activate.bat
-```
-
-Example: `C:\Users\'Username'\venv\Scripts\activate.bat`
