@@ -2,6 +2,8 @@
 
 Welcome to the Introduction to Programming Concepts module! This module consists of several lessons to help you learn the fundamentals required to learn how to program with Python. The goal of this lab is to install and use the Python and the Rubrik SDK for Python.
 
+Workshop slides can be found [here](/Getting%20Started%20with%20Python.pdf).
+
 ## :pencil: Lessons
 
 To get started, download the most up-to-date. Click [here](https://codeload.github.com/RoxieAtRubrik/getting-started-with-python/zip/master) to download a `.ZIP` of the repo and its contents.
