@@ -2,15 +2,17 @@
 
 To prepare for this module's lab, you will need to install Python, `pip`, and set up a virtual environment.
 
-In the lab environment, switch to your CentOS VM. To do so, click **Consoles** on the left hand of the VLP screen, scroll down, and click `CENTOS`. 
+In the lab environment, switch to your Linux VM. To do so, click the **TightVNC Viewer** icon on the jumpbox desktop. 
 
-![](https://user-images.githubusercontent.com/47801550/58071945-733df400-7b9e-11e9-8188-7fd6e99ce9ec.png)
+![](https://user-images.githubusercontent.com/29388592/89324611-68a13a80-d63c-11ea-96b8-c0a507e8d33c.png)
 
-Select **Not Listed?** and type `root` as the username. 
+Click **Connect** and enter the lab password.
 
-![](https://user-images.githubusercontent.com/47801550/58072043-c021ca80-7b9e-11e9-857b-72e378f33e24.png)
+![](https://user-images.githubusercontent.com/29388592/89324685-8a022680-d63c-11ea-971e-e2c2aed75404.png)
 
-Use the password listed in the [lab topology](/lab-topology.md). 
+Once authenticated, open up the terminal. 
+
+![](https://user-images.githubusercontent.com/29388592/89324823-bcac1f00-d63c-11ea-8fe9-637809800f7b.png)
 
 ## Installing Python
 
