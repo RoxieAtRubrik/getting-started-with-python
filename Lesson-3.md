@@ -74,7 +74,7 @@ The output should look similar to the following:
 
 You can see for each one of these VMs, there are two GET calls to gather the information needed to then conduct one POST call to send the Live Mount request.
 
-Switch to the Windows Jumpbox both on vCenter and Rubrik CDM and verify Live Mount. Lab topology information can be found [here](/lab-topology.md).
+Switch to the Windows Jumpbox both on vCenter and Rubrik CDM and verify Live Mount.
 
 ## SLA Domain Assignments
 
