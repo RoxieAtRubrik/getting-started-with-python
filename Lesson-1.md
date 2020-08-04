@@ -19,19 +19,10 @@ Once authenticated, open up the terminal.
 (Optional) As a matter of good practice, first update packages:
 
 ```
-yum -y update
+sudo apt update
 ```
 
-(Optional) Next step would be install `yum-Utils`:
-
-```
-yum -y install yum-utils
-```
-
-| Note: `yum-utils` is a collection of utilities and plugins extending and supplementing yum in various ways. |
-| --- |
-
-Python 2.7 should have been installed on the CentOS VM. To verify:
+Python 2.7 should have been installed on the Linux VM. To verify:
 
 ```
 python --version
