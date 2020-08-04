@@ -12,7 +12,7 @@ There are three variables required for authenticating:
 * `username` - username, which is admin in this case
 * `password` - password for admin
 
-This information can be found by accessing the [Lab Topology](/lab-topology.md). Now, import the Rubik CDM module in Python so the Rubrik cluster functions can be called and then specify variables:
+Now, import the Rubik CDM module in Python so the Rubrik cluster functions can be called and then specify variables:
 
 ```
 export rubrik_cdm_node_ip=192.168.2.150
